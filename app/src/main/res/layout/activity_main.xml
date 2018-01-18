@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.usuario.reversechronometer.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    >
+    <!--
+        res-auto delega en el proyecto el espacio de nombres
+        xmlns:project="http://schemas.android.com/apk/res-auto"
+
+        parece que app al usar res-auto nos evita incorporar nuestro propio
+        espacio de nombres
+    -->
+    <!--Hereda directamente de TextView y basta con poner el nombre-->
+    <com.example.usuario.reversechronometer.ReverseChronometer
+        android:id="@+id/rvcTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/_00_00"
+        />
+
+</android.support.constraint.ConstraintLayout>
