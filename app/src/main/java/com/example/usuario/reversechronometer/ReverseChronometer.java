@@ -1,16 +1,18 @@
 package com.example.usuario.reversechronometer;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.SystemClock;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 /**
  * Ejemplo de control personalizado. Va a tener su propio hilo.
  */
-//@SuppressLint("AppCompatCustomView")
-public class ReverseChronometer extends android.support.v7.widget.AppCompatTextView implements Runnable {
+@SuppressLint("AppCompatCustomView")
+public class ReverseChronometer extends TextView implements Runnable {
 
     /**
      * Estado del componente que deben ser accesibles en el xml.
