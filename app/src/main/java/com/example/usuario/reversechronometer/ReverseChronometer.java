@@ -1,18 +1,16 @@
 package com.example.usuario.reversechronometer;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.SystemClock;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 /**
  * Ejemplo de control personalizado. Va a tener su propio hilo.
  */
-@SuppressLint("AppCompatCustomView")
-public class ReverseChronometer extends TextView implements Runnable {
+//@SuppressLint("AppCompatCustomView")
+public class ReverseChronometer extends android.support.v7.widget.AppCompatTextView implements Runnable {
 
     /**
      * Estado del componente que deben ser accesibles en el xml.
@@ -23,7 +21,8 @@ public class ReverseChronometer extends TextView implements Runnable {
     private long startTime;
 
     public ReverseChronometer(Context context, AttributeSet attrs) {
-        super(context);
+        //CUIDAO: no vale sólo pasarle context
+        super(context, attrs);
         //Recorre la raíz ReverseChronometer en attrs.xml
         //y guarda los atributos attrs en un array tipado
         TypedArray attributes = getContext().obtainStyledAttributes(attrs, R.styleable.ReverseChronometer);
